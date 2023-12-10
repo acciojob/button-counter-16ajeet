@@ -1,11 +1,19 @@
 
-import React from "react";
+import React, { useState } from "react";
 import './../styles/App.css';
 
 const App = () => {
+  const [clickTime, setClickTime] = useState(0);
+  
+  function counter(clickTime){
+    setClickTime(clickTime++);
+  }
+    
+  
   return (
     <div>
-        {/* Do not remove the main div */}
+        <p>Button clicked {clickTime} times</p>
+        <button onClick={counter}>Click Me</button>
     </div>
   )
 }
