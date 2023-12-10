@@ -5,14 +5,14 @@ import './../styles/App.css';
 const App = () => {
   const [clickTime, setClickTime] = useState(0);
   
-  function counter(clickTime){
+  function counter(){
     setClickTime(clickTime++);
   }
     
   
   return (
     <div>
-        <p>Button clicked {setClickTime} times</p>
+        <p>Button clicked {clickTime} times</p>
         <button onClick={counter}>Click Me</button>
     </div>
   )
